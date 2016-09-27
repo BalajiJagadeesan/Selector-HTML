@@ -52,6 +52,7 @@ function saveSelection(name, text) {
 				localStorage.setItem("hits", JSON.stringify(hits));
 			}
 		}
+		var temp=localStorage.setItem("temp",JSON.stringify(name[0]));
 	}
 	else { //use cookies
 		SetCookie("options", JSON.stringify(choice));
@@ -83,6 +84,7 @@ function saveSelection(name, text) {
 				SetCookie("hits", JSON.stringify(hits));
 			}
 		}
+		var temp=SetCookie("temp",JSON.stringify(name[0]));
 	}
 }
 
@@ -154,6 +156,7 @@ function createform() {
 	div1.setAttribute("class", "cards")
 	var form = document.createElement("form");
 	form.setAttribute("id", "fillForm");
+	form.setAttribute("action","post.html")
 	form.setAttribute("autocomplete", "on");
 	div1.appendChild(form);
 	myDiv.appendChild(div1);
@@ -164,7 +167,7 @@ function createform() {
 	para.appendChild(node);
 	form.appendChild(para);
 	var text = document.createElement("textarea");
-	text.setAttribute("name", "commet");
+	text.setAttribute("name", "comment");
 	text.setAttribute("form", "fillForm");
 	form.appendChild(text);
 	var b = document.createElement("input");

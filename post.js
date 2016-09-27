@@ -1,6 +1,7 @@
 var hitcount;
 var user;
 var choice;
+var comment;
 var http = new XMLHttpRequest();
 var url = "data.json";
 console.log(url)
@@ -17,11 +18,13 @@ function post(array) {
 	if (localStorage.getItem("options") != null) {
 		choice = JSON.parse(localStorage.getItem("options"));
 		var name = JSON.parse(localStorage.getItem("name"));
-		var hits = JSON.parse(localStorage.getItem("hits"))
+		var hits = JSON.parse(localStorage.getItem("hits"));
+		var com = JSON.parse(localStorage.getItem("comment"));
 		for (i = 0; i < name.length; i++) {
-			if (name[i] == localStorage.getItem("temp")) {
+			if (name[i] == JSON.parse(localStorage.getItem("temp"))) {
 				hitcount = parseInt(hits[i]);
 				user = name[i];
+				comment=com[i];
 			}
 			console.log(hitcount);
 			console.log(user);
@@ -50,7 +53,7 @@ function gendata(array, choice) {
 	div1.setAttribute("id", "mydiv")
 	div1.setAttribute("class", "cards")
 	var para = document.createElement("p");
-	var node = document.createTextNode("Welcome " + user + ".This is your " + hitcount + " time visting our website.You require "+choice[0]+" computer of subclass "+choice[1]+" .The model you have chosen is "+choice[2]+".");
+	var node = document.createTextNode("Welcome " + user + ".This is your " + hitcount + " time visting our website.You require "+choice[0]+" computer of subclass "+choice[1]+" .The model you have chosen is "+choice[2]+".The comment is"+comment);
 	para.appendChild(node);
 	div1.appendChild(para);
 	myDiv.appendChild(div1);
