@@ -1,0 +1,32 @@
+{
+	"partpicker": {
+		"Qpart": "What is your fav color",
+		images:"images/start.jpg",
+		"choose": ["yes","no"]		
+	},
+	"yes":{
+		"Qpart": "What is your fav color",
+		images:"images/yes.jpg",
+		"choose": ["red","blue","green","orange","yellow","black","white"]
+	},
+	"no":{
+		"Qpart": "What is your fav color",
+		images:"images/no.jpg",
+		"choose": ["lion","tiger","giraffe","crocodile","sealion","whale"]
+	},
+	"red":{},
+	"blue":{},
+	"green":{},
+	"orange":{},
+	"yellow":{},
+	"black":{},
+	"white":{},
+	"lion":{},
+	"tiger":{},
+	"giraffe":{},
+	"crocodile":{},
+	"sealion":{},
+	"whale":{}
+}
+	
+	

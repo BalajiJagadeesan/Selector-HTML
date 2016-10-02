@@ -1,4 +1,4 @@
-@import url("reset.css");
+@import url("reset.css");/*To reset the styles of browser to avoid crossbrowser issues*/
 body {
 	/*font-family: Verdana, Arial, Helvetica, sans-serif;*/
 	font-family: Robota,sans-serif;
@@ -128,12 +128,16 @@ img {
 .browser{
 	font-size: 20px;
 	padding-top:3em;
+	color: red;
+}
+.about{
+	font-size:16px;
+	padding:3em;
 }
 .cards {
 	background-color: #607D8B;
 	margin-top: 10px;
 	position: relative;
-	width: 20%;
 	padding: 10px;
 	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
 	transition: 0.3s;
@@ -143,6 +147,17 @@ img {
 
 .cards:hover {
 	box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+}
+
+.cardbig{
+	background-color: #607D8B;
+	margin-top: 10px;
+	position: relative;
+	width: 70%;
+	padding: 10px;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+	transition: 0.3s;
+	border-radius: 5px;
 }
 
 #footer {

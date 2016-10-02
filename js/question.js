@@ -1,7 +1,22 @@
-var data;
-var count = 1;
-var sel;
-var choice = new Array(3);
+/*
+------------------------------------------------------------------------------------------------------------------
+"question.js" contains the main functionality that is required to generate and store questions,choices and user details
+Author-Balaji Jagadeesan
+------------------------------------------------------------------------------------------------------------------
+*/
+var data; //To store the json object dynamically
+var count = 1; //used to name the div and sel uniquely
+var choice = new Array(3); //To store the user choice
+/*
+--------------------------------------------------------
+The following contains the AJAX code to retrieve the JSON 
+data from the file "data.json" and store it in the variable
+"data".
+After storing the JSON object it invokes 2 functions
+1.createImage(array)- Creates one image 
+2.createSelection(array)-Create the first select statement
+--------------------------------------------------------
+*/
 var http = new XMLHttpRequest();
 var url = "data.json";
 console.log(url)
@@ -16,8 +31,22 @@ http.onreadystatechange = function () {
 };
 http.open("GET", url, true);
 http.send();
+/*
+-----------------------------------------------------------
+The following function is used to save the choice and 
+user details in localStorage(if available) or in cookies.
 
+localStorage or cookies contains the following info 
+name:stores the name of the user(firstName+lastName)
+hits:No of times the user visited the site
+comment:the comment given by the user
+
+The function is written in such a way to store only 5 recent
+elements.Others are deleted
+-----------------------------------------------------------
+*/
 function saveSelection(name, text) {
+	//localStorage logic
 	if (typeof (Storage) !== "undefined") {
 		localStorage.setItem("options", JSON.stringify(choice));
 		if (!localStorage.getItem("name")) {
@@ -50,7 +79,8 @@ function saveSelection(name, text) {
 		}
 		var temp = localStorage.setItem("temp", JSON.stringify(name[0]));
 	}
-	else { //use cookies
+	//Cookie logic
+	else {
 		SetCookie("options", JSON.stringify(choice));
 		if (!GetCookie("name")) {
 			SetCookie("name", JSON.stringify(name));
@@ -83,7 +113,12 @@ function saveSelection(name, text) {
 		var temp = SetCookie("temp", JSON.stringify(name[0]));
 	}
 }
-
+/*
+--------------------------------------------------------------
+The following function is used to access the imagels div and 
+create an image by accessing the source from the json data
+--------------------------------------------------------------
+*/
 function createImage(array) {
 	var myDiv = document.getElementById("imagels");
 	var pic = document.createElement("img");
@@ -93,7 +128,14 @@ function createImage(array) {
 	pic.setAttribute("src", array["image"]);
 	myDiv.appendChild(pic);
 }
+/*
+--------------------------------------------------------------
+The following function is used to create a div inside question 
+div contains question and its corresponding choices.
 
+The animation of div is done using move(id) function 
+--------------------------------------------------------------
+*/
 function createSelect(array) {
 	var myDiv = document.getElementById("question");
 	var div1 = document.createElement("div")
@@ -121,7 +163,15 @@ function createSelect(array) {
 	myDiv.appendChild(div1);
 	move(div1.id);
 }
+/*
+--------------------------------------------------------------
+The following function triggers whenever there is a change in the 
+select statement.
 
+The createSelect() is called recursively until there is a choice
+in the json data otherwise form is created using createform().
+--------------------------------------------------------------
+*/
 function listen(that) {
 	sel = document.getElementById(that.id);
 	var img = document.getElementsByTagName("img");
@@ -143,7 +193,12 @@ function listen(that) {
 	if (!data[val].choose) createform();
 	else createSelect(data[val]);
 }
-
+/*
+--------------------------------------------------------------
+The following function is used to create a form with input like
+firstName,lastName,comment.
+--------------------------------------------------------------
+*/
 function createform() {
 	console.log("reached the end");
 	var myDiv = document.getElementById("question");
@@ -155,6 +210,7 @@ function createform() {
 	form.setAttribute("id", "fillForm");
 	form.setAttribute("action", "post.html")
 	form.setAttribute("autocomplete", "on");
+	form.setAttribute("onsubmit", "return validateForm()")
 	div1.appendChild(form);
 	myDiv.appendChild(div1);
 	createInput("First Name");
@@ -169,13 +225,19 @@ function createform() {
 	form.appendChild(text);
 	var b = document.createElement("input");
 	b.setAttribute("type", "submit");
+	b.setAttribute("value", "Submit");
 	b.setAttribute("onclick", "buttonClicked()");
 	form.appendChild(b);
 	div1.appendChild(form);
 	myDiv.appendChild(div1);
 	move(div1.id)
 }
-
+/*
+--------------------------------------------------------------
+The following function is used to create the input for the form
+firstName,lastName,comment
+--------------------------------------------------------------
+*/
 function createInput(name) {
 	var myDiv = document.getElementById("mydiv" + count);
 	var form = document.getElementsByTagName("form");
@@ -188,7 +250,13 @@ function createInput(name) {
 	form[0].appendChild(inp);
 	myDiv.appendChild(form[0])
 }
-
+/*
+--------------------------------------------------------------
+The following function is triggered whenever the submit button 
+is clicked .The function calls saveSelection() function to 
+save all user info in localStorage or cookies for later use.
+--------------------------------------------------------------
+*/
 function buttonClicked() {
 	var inp = document.getElementsByTagName("input");
 	var text = document.getElementsByTagName("textarea");
@@ -200,7 +268,12 @@ function buttonClicked() {
 	var comment = [text[0].value];
 	saveSelection(name, comment);
 }
-
+/*
+--------------------------------------------------------------
+The following function is used to animate the div tag.
+The div tag slides in from left and stops at 100px.
+--------------------------------------------------------------
+*/
 function move(elem) {
 	var elem = document.getElementById(elem);
 	var left = 0;
@@ -211,8 +284,33 @@ function move(elem) {
 			clearInterval(id);
 		}
 		else {
-			left= left + 10;
+			left = left + 10;
 			elem.style.left = left + 'px';
 		}
 	}
+}
+/*
+--------------------------------------------------------------
+The following function is used to validate the form 
+
+firstName,lastName,comment-cannot be null
+firstName,lastName should contain only alphabets
+--------------------------------------------------------------
+*/
+function validateForm() {
+	var inp = document.getElementsByTagName("input");
+	var text = document.getElementsByTagName("textarea")
+	var regex = /^[A-Za-z]+$/;
+	if (inp[0].value == "" || inp[1].value == "" || text[0].value == "") {
+		alert("Some fields are missing");
+		return false;
+	}
+	if (inp[0].value.match(regex)) {
+		return true;
+	}
+	else {
+		alert("Name must contain only alphabets");
+		return false;
+	}
+	return true;
 }
