@@ -56,7 +56,6 @@ ul.topnav li a {
 	font-weight: normal;
 	font-size: 15px;
 	font-variant: small-caps;
-	/*line-height: 20px;*/
 	letter-spacing: 2px;
 	word-spacing: 2px;
 	text-transform: capitalize;
@@ -87,13 +86,12 @@ ul.topnav li.right {
 }
 
 #wrapper {
-	margin-left: auto;
-	margin-right: auto;
+	position:relative;
 	width: 95%
 }
 
 .content {
-	float: absolute;
+	position:relative;
 	text-align: left
 }
 
@@ -113,6 +111,10 @@ select {
 	background: #ccc;
 }
 
+input{
+	display:block;
+}
+
 img {
 	float: right;
 	margin-top: 10px;
@@ -122,10 +124,14 @@ img {
 	width: 30%;
 	border-radius: 5px;
 }
-
+.browser{
+	font-size: 20px;
+	padding-top:3em;
+}
 .cards {
 	background-color: #607D8B;
 	margin-top: 10px;
+	position: relative;
 	width: 20%;
 	padding: 10px;
 	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
@@ -137,8 +143,6 @@ img {
 .cards:hover {
 	box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
 }
-
-
 
 #footer {
 	width: 95vw;

@@ -1,5 +1,6 @@
 var data;
 var count = 1;
+var sel;
 var choice = new Array(3);
 var http = new XMLHttpRequest();
 var url = "data.json";
@@ -123,10 +124,11 @@ function createSelect(array) {
 	}
 	div1.appendChild(sel);
 	myDiv.appendChild(div1);
+	move(div1.id);
 }
 
 function listen(that) {
-	var sel = document.getElementById(that.id);
+	sel = document.getElementById(that.id);
 	var img = document.getElementsByTagName("img");
 	while (sel.parentNode != sel.parentNode.parentNode.lastChild) {
 		sel.parentNode.parentNode.removeChild(sel.parentNode.parentNode.lastChild);
@@ -176,6 +178,7 @@ function createform() {
 	form.appendChild(b);
 	div1.appendChild(form);
 	myDiv.appendChild(div1);
+	move(div1.id)
 }
 
 function createInput(name) {
@@ -201,4 +204,18 @@ function buttonClicked() {
 	console.log(name);
 	var comment = [text[0].value];
 	saveSelection(name, comment);
+}
+
+function move(elem) {
+  var elem = document.getElementById(elem);
+  var pos = 0;
+  var id = setInterval(frame,4);
+  function frame() {
+    if (pos == 100) {
+      clearInterval(id);
+    } else {
+      pos=pos+10;
+      elem.style.left = pos + 'px';
+    }
+  }
 }
