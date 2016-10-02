@@ -1,32 +1,58 @@
 {
 	"partpicker": {
-		"Qpart": "What is your fav color",
-		images:"images/start.jpg",
+		"Qpart": "Do you have a fav color",
+		"image":"images/filler.jpg",
 		"choose": ["yes","no"]		
 	},
 	"yes":{
 		"Qpart": "What is your fav color",
-		images:"images/yes.jpg",
+		"image":"images/filler.jpg",
 		"choose": ["red","blue","green","orange","yellow","black","white"]
 	},
 	"no":{
-		"Qpart": "What is your fav color",
-		images:"images/no.jpg",
+		"Qpart": "What is your fav animal",
+		"image":"images/filler.jpg",
 		"choose": ["lion","tiger","giraffe","crocodile","sealion","whale"]
 	},
-	"red":{},
-	"blue":{},
-	"green":{},
-	"orange":{},
-	"yellow":{},
-	"black":{},
-	"white":{},
-	"lion":{},
-	"tiger":{},
-	"giraffe":{},
-	"crocodile":{},
-	"sealion":{},
-	"whale":{}
+	"red":{
+		"image":"images/filler.jpg"
+	},
+	"blue":{
+		"image":"images/filler.jpg"
+	},
+	"green":{
+		"image":"images/filler.jpg"
+	},
+	"orange":{
+		"image":"images/filler.jpg"
+	},
+	"yellow":{
+		"image":"images/filler.jpg"
+	},
+	"black":{
+		"image":"images/filler.jpg"
+	},
+	"white":{
+		"image":"images/filler.jpg"
+	},
+	"lion":{
+		"image":"images/filler.jpg"
+	},
+	"tiger":{
+		"image":"images/filler.jpg"
+	},
+	"giraffe":{
+		"image":"images/filler.jpg"
+	},
+	"crocodile":{
+		"image":"images/filler.jpg"
+	},
+	"sealion":{
+		"image":"images/filler.jpg"
+	},
+	"whale":{
+		"image":"images/filler.jpg"
+	}
 }
 	
 	

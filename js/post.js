@@ -92,7 +92,7 @@ function gendata(array, choice) {
 	div1.setAttribute("id", "mydiv")
 	div1.setAttribute("class", "cards")
 	var para = document.createElement("p");
-	var node = document.createTextNode("Welcome " + user + ". This is your '" + hitcount + " time' visting our website.You require ' " + choice[0] + "' computer of subclass '" + choice[1] + "'. The model you have chosen is '" + choice[2] + "' .Your comment on our product is '" + comment + "'");
+	var node = document.createTextNode("Welcome " + user + ". This is your '" + hitcount + " time' visting our website.You require '" + choice[0] + "' computer of subclass '" + choice[1] + "'. The model you have chosen is '" + choice[2] + "' .Your comment on our product is '" + comment + "'");
 	para.appendChild(node);
 	div1.appendChild(para);
 	myDiv.appendChild(div1);

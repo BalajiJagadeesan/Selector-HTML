@@ -13,7 +13,7 @@ The following contains the AJAX code to retrieve the JSON
 data from the file "data.json" and store it in the variable
 "data".
 After storing the JSON object it invokes 2 functions
-1.createImage(array)- Creates one image 
+1.createImage(array)- Creates an image 
 2.createSelection(array)-Create the first select statement
 --------------------------------------------------------
 */
