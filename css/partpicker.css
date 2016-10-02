@@ -18,7 +18,7 @@ p {
 	margin-right: 2em;
 	margin-bottom: 2em;
 	width: 95vw;
-	height: 120vh;
+	height: 100vh;
 }
 
 #header {
@@ -147,7 +147,8 @@ img {
 #footer {
 	width: 95vw;
 	height: 2em;
-	margin-top: 80vh;
+	position: absolute;
+	top:100vh;
 	margin-right: 2em;
 	background-color: #0097A7;
 	text-align: center;

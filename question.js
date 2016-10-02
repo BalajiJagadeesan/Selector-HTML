@@ -8,19 +8,14 @@ console.log(url)
 http.onreadystatechange = function () {
 	if (this.readyState == 4 && this.status == 200) {
 		var myArr = JSON.parse(this.responseText);
-		start(myArr);
+		data = myArr;
+		createImage(data["partpicker"]);
+		//console.log(data["partpicker"]);
+		createSelect(data["partpicker"]);
 	}
 };
 http.open("GET", url, true);
 http.send();
-
-function start(array) {
-	console.log(array);
-	data = array;
-	createImage(data["partpicker"]);
-	console.log(data["partpicker"]);
-	createSelect(data["partpicker"]);
-}
 
 function saveSelection(name, text) {
 	if (typeof (Storage) !== "undefined") {
@@ -53,7 +48,7 @@ function saveSelection(name, text) {
 				localStorage.setItem("hits", JSON.stringify(hits));
 			}
 		}
-		var temp=localStorage.setItem("temp",JSON.stringify(name[0]));
+		var temp = localStorage.setItem("temp", JSON.stringify(name[0]));
 	}
 	else { //use cookies
 		SetCookie("options", JSON.stringify(choice));
@@ -85,7 +80,7 @@ function saveSelection(name, text) {
 				SetCookie("hits", JSON.stringify(hits));
 			}
 		}
-		var temp=SetCookie("temp",JSON.stringify(name[0]));
+		var temp = SetCookie("temp", JSON.stringify(name[0]));
 	}
 }
 
@@ -158,7 +153,7 @@ function createform() {
 	div1.setAttribute("class", "cards")
 	var form = document.createElement("form");
 	form.setAttribute("id", "fillForm");
-	form.setAttribute("action","post.html")
+	form.setAttribute("action", "post.html")
 	form.setAttribute("autocomplete", "on");
 	div1.appendChild(form);
 	myDiv.appendChild(div1);
@@ -207,15 +202,17 @@ function buttonClicked() {
 }
 
 function move(elem) {
-  var elem = document.getElementById(elem);
-  var pos = 0;
-  var id = setInterval(frame,4);
-  function frame() {
-    if (pos == 100) {
-      clearInterval(id);
-    } else {
-      pos=pos+10;
-      elem.style.left = pos + 'px';
-    }
-  }
+	var elem = document.getElementById(elem);
+	var left = 0;
+	var id = setInterval(frame, 4);
+
+	function frame() {
+		if (left == 100) {
+			clearInterval(id);
+		}
+		else {
+			left= left + 10;
+			elem.style.left = left + 'px';
+		}
+	}
 }
