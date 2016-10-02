@@ -19,7 +19,7 @@ After storing the JSON object it invokes 2 functions
 */
 var http = new XMLHttpRequest();
 var url = "data.json";
-console.log(url)
+//console.log(url)
 http.onreadystatechange = function () {
 	if (this.readyState == 4 && this.status == 200) {
 		var myArr = JSON.parse(this.responseText);
@@ -124,7 +124,7 @@ function createImage(array) {
 	var pic = document.createElement("img");
 	pic.setAttribute("id", "pic");
 	pic.setAttribute("alt", "picture");
-	console.log(array["image"]);
+	//console.log(array["image"]);
 	pic.setAttribute("src", array["image"]);
 	myDiv.appendChild(pic);
 }
@@ -179,14 +179,14 @@ function listen(that) {
 		sel.parentNode.parentNode.removeChild(sel.parentNode.parentNode.lastChild);
 		count = count - 1;
 	}
-	console.log("count" + count);
-	console.log(that.id)
+	//console.log("count" + count);
+	//console.log(that.id)
 	var op = sel.options;
 	var id = op[op.selectedIndex].id;
 	var val = that.value
-	console.log(id);
-	console.log(val);
-	console.log(data[val])
+	//console.log(id);
+	//console.log(val);
+	//console.log(data[val])
 	choice[count - 1] = val;
 	count++;
 	img[0].setAttribute("src", data[val]["image"]);
@@ -200,7 +200,7 @@ firstName,lastName,comment.
 --------------------------------------------------------------
 */
 function createform() {
-	console.log("reached the end");
+	//console.log("reached the end");
 	var myDiv = document.getElementById("question");
 	var div1 = document.createElement("div");
 	var id = "mydiv" + count;
@@ -264,7 +264,7 @@ function buttonClicked() {
 	var lname = inp[1].value;
 	var temp = fname + " " + lname
 	var name = [temp];
-	console.log(name);
+	//console.log(name);
 	var comment = [text[0].value];
 	saveSelection(name, comment);
 }

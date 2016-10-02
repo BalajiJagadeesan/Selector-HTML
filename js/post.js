@@ -18,7 +18,7 @@ post(data) is invoked to retrieve the stored data
 */
 var http = new XMLHttpRequest();
 var url = "data.json";
-console.log(url)
+//console.log(url)
 http.onreadystatechange = function () {
 	if (this.readyState == 4 && this.status == 200) {
 		var myArr = JSON.parse(this.responseText);
@@ -72,9 +72,9 @@ It also creates images corresponding to the user choice.
 ------------------------------------------------------------
 */
 function gendata(array, choice) {
-	console.log(hitcount);
-	console.log(user);
-	console.log(choice);
+	//console.log(hitcount);
+	//console.log(user);
+	//console.log(choice);
 	if (hitcount == 1) {
 		hitcount = hitcount + 'st';
 	}
@@ -101,7 +101,7 @@ function gendata(array, choice) {
 		var pic = document.createElement("img");
 		pic.setAttribute("id", "pic");
 		pic.setAttribute("alt", "picture");
-		console.log(array[choice[i]]["image"]);
+		//console.log(array[choice[i]]["image"]);
 		pic.setAttribute("src", array[choice[i]]["image"]);
 		myDiv.appendChild(pic);
 	}
