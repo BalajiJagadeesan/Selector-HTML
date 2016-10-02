@@ -36,55 +36,55 @@
 	
 	"HP Pavilion Desktop":{
 		"Qpart": "Thank you for selection this model please proceed for checkout",
-		"image": "image",
+		"image": "images/hppav.jpg",
 		"details": ""
 	},
 	
 	"Dell Inspiron 3650 Desktop":{
 		"Qpart": "Thank you for selection this model please proceed for checkout",
-		"image": "image",
+		"image": "images/dellinsp.jpg",
 		"details": ""
 	},
 	
 	"Lenovo 300S":{
 		"Qpart": "Thank you for selection this model please proceed for checkout",
-		"image": "image",
+		"image": "images/lenovo300s.jpg",
 		"details": ""
 	},
 	
 	"HP All-In-One Pavilion Desktop":{
 		"Qpart": "Thank you for selection this model please proceed for checkout",
-		"image": "image",
+		"image": "images/hpaio.jpg",
 		"details": ""
 	},
 	
 	"Asus All-In-One Desktop":{
 		"Qpart": "Thank you for selection this model please proceed for checkout",
-		"image": "image",
+		"image": "images/asusaio.jpg",
 		"details": ""
 	},
 	
 	"Lenovo 700":{
 		"Qpart": "Thank you for selection this model please proceed for checkout",
-		"image": "image",
+		"image": "images/lenovoaio.jpg",
 		"details": ""
 	},
 	
 	"HP Elite 8200":{
 		"Qpart": "Thank you for selection this model please proceed for checkout",
-		"image": "image",
+		"image": "images/hpelite.jpg",
 		"details": ""
 	},
 	
 	"Lenovo ThinkCenter M91":{
 		"Qpart": "Thank you for selection this model please proceed for checkout",
-		"image": "image",
+		"image": "images/lenovothinkcenter.jpg",
 		"details": ""
 	},
 	
 	"Dell Optiplex 760":{
 		"Qpart": "Thank you for selection this model please proceed for checkout",
-		"image": "image",
+		"image": "images/dellopti.jpg",
 		"details": ""
 	},
 	
@@ -119,55 +119,55 @@
 	
 	"HP Stream Mini":{
 		"Qpart": "Thank you for selection this model please proceed for checkout",
-		"image": "images/",
+		"image": "images/hpmini.jpg",
 		"details": ""
 	},
 	
 	"Intel NUC":{
 		"Qpart": "Thank you for selection this model please proceed for checkout",
-		"image": "image",
+		"image": "images/intelnuc.jpg",
 		"details": ""
 	},
 	
 	"GigaByte BRIX":{
 		"Qpart": "Thank you for selection this model please proceed for checkout",
-		"image": "image",
+		"image": "images/brix.jpg",
 		"details": ""
 	},
 	
 	"Lenovo Ideacentre Stick 300":{
 		"Qpart": "Thank you for selection this model please proceed for checkout",
-		"image": "image",
+		"image": "images/lenstick.jpg",
 		"details": ""
 	},
 	
 	"Intel Compute Stick":{
 		"Qpart": "Thank you for selection this model please proceed for checkout",
-		"image": "image",
+		"image": "images/intelstick.jpg",
 		"details": ""
 	},
 	
 	"Asus Chromebit":{
 		"Qpart": "Thank you for selection this model please proceed for checkout",
-		"image": "image",
+		"image": "images/asuschrome.jpg",
 		"details": ""
 	},
 	
 	"Google Chromecast":{
 		"Qpart": "Thank you for selection this model please proceed for checkout",
-		"image": "image",
+		"image": "images/chromecast.jpg",
 		"details": ""
 	},
 	
 	"Alienware Alpha":{
 		"Qpart": "Thank you for selection this model please proceed for checkout",
-		"image": "image",
+		"image": "images/alpha.jpg",
 		"details": ""
 	},
 	
 	"Amazon fireTV":{
 		"Qpart": "Thank you for selection this model please proceed for checkout",
-		"image": "image",
+		"image": "images/firetv.jpg",
 		"details": ""
 	},
 	
@@ -181,76 +181,76 @@
 	
 	"low tier" :{
 		"Qpart": "Choose the desktop you want to buy",
-		"image": "image",
+		"image": "images/lowtier.jpg",
 		"details": "",
 		"choose":["CyberpowerPC Gamer Ultra GUA3100A","Lenovo X315 Gaming Desktop","iBUYPOWER AM-FX06G Gaming Desktop"]
 	},
 
 	"medium tier" :{
 		"Qpart": "Choose the desktop you want to buy",
-		"image": "image",
+		"image": "images/medium.jpg",
 		"details": "",
 		"choose":["Asus G20AJ-US009S","Acer Predator AG3","CyberPowerPC Gamer Xtreme-GXi9840Q"]
 	},
 
 	"high tier" :{
 		"Qpart": "Choose the desktop you want to buy",
-		"image": "image",
+		"image": "images/high.jpg",
 		"details": "",
 		"choose":["SkyTech Supremacy Gaming Computer","CybertronPC Palladium 970Z Gaming Desktop","MSI Vortex"]
 	},
 	
 	"CyberpowerPC Gamer Ultra GUA3100A":{
 		"Qpart": "Thank you for selection this model please proceed for checkout",
-		"image": "image",
+		"image": "images/cyberlow.jpg",
 		"details": ""
 	},
 	
 	"Lenovo X315 Gaming Desktop":{
 		"Qpart": "Thank you for selection this model please proceed for checkout",
-		"image": "image",
+		"image": "images/lenlow.jpg",
 		"details": ""
 	},
 	
 	"iBUYPOWER AM-FX06G Gaming Desktop":{
 		"Qpart": "Thank you for selection this model please proceed for checkout",
-		"image": "image",
+		"image": "images/buylow.jpg",
 		"details": ""
 	},
 	
 	"Asus G20AJ-US009S":{
 		"Qpart": "Thank you for selection this model please proceed for checkout",
-		"image": "image",
+		"image": "images/asusmed.jpg",
 		"details": ""
 	},
 	
 	"Acer Predator AG3":{
 		"Qpart": "Thank you for selection this model please proceed for checkout",
-		"image": "image",
+		"image": "images/acermed.jpg",
 		"details": ""
 	},
 	
 	"CyberPowerPC Gamer Xtreme-GXi9840Q":{
 		"Qpart": "Thank you for selection this model please proceed for checkout",
-		"image": "image",
+		"image": "images/cybermed.jpg",
 		"details": ""
 	},
 	
 	"SkyTech Supremacy Gaming Computer":{
 		"Qpart": "Thank you for selection this model please proceed for checkout",
-		"image": "image",
+		"image": "images/skytech.jpg",
 		"details": ""
 	},
 	
 	"CybertronPC Palladium 970Z Gaming Desktop":{
 		"Qpart": "Thank you for selection this model please proceed for checkout",
-		"image": "image",
+		"image": "images/cyberhigh.jpg",
 		"details": ""
 	},
 	
 	"MSI Vortex":{
 		"Qpart": "Thank you for selection this model please proceed for checkout",
-		"image": "image",
+		"image": "images/msihigh.jpg",
 		"details": ""
 	}
 }

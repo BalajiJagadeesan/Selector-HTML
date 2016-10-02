@@ -1,6 +1,7 @@
 @import url("reset.css");
 body {
-	font-family: Verdana, Arial, Helvetica, sans-serif;
+	/*font-family: Verdana, Arial, Helvetica, sans-serif;*/
+	font-family: Robota,sans-serif;
 	font-size: 13px;
 	color: white;
 	background-color: whitesmoke;
@@ -146,7 +147,7 @@ img {
 
 #footer {
 	width: 95vw;
-	height: 2em;
+	height: 3em;
 	position: absolute;
 	top:100vh;
 	margin-right: 2em;
