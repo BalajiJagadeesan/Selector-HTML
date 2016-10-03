@@ -18,7 +18,7 @@ C:.
 ├───images -contains all the images used by the application
 │
 └───js
-        browsercheck.js - Contains the logics to check whether the browser is compatabile or not
+        browsercheck.js - Contains the logics to check whether the browser is compatible or not
         cookies.js - Contains logic to store and retrieve cookies 
         post.js - Contains the logic to post the output to the HTML page dynamically
         question.js -The main js file that is used to generate elements on to the page dynamically.
@@ -58,7 +58,11 @@ Display of output:
 	
 Styling:
 	The styling is done is css which follows material design and used of card view to have a visual impact 
+	
+Validation:
+	The form is validated using validate() function.It checks for null fields and whether the firstName and lastName field contains only alphabet.
 
 <<SideNote>>
 	->For good performance of the system use it in Google Chrome.IE works but the animation will not be fluid because of the slow load time of IE.
 	->Since AJAX code is used, trying to run index.html without hosting,may or may not work properly,so please use brackets to emulate locally or host it on a server.
+	-> The back button of browser returning from post.html to index.html "sometimes" returns typeerror:appendchild of null in createImage().Try going forward and coming back or refresh the page.It happens rarely and I don't seem to understand the root of the cause.

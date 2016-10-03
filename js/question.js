@@ -40,9 +40,6 @@ localStorage or cookies contains the following info
 name:stores the name of the user(firstName+lastName)
 hits:No of times the user visited the site
 comment:the comment given by the user
-
-The function is written in such a way to store only 5 recent
-elements.Others are deleted
 -----------------------------------------------------------
 */
 function saveSelection(name, text) {
@@ -60,6 +57,12 @@ function saveSelection(name, text) {
 			var comment = JSON.parse(localStorage.getItem("comment"));
 			var hits = JSON.parse(localStorage.getItem("hits"));
 			for (i = 0; i < old.length; i++) {
+				while(i>=4){
+					old.pop();
+					comment.pop();
+					hits.pop();
+					i--;
+				}
 				if (old[i] == name) {
 					flag = 1;
 					hits[i] = parseInt(hits[i]) + 1;
@@ -93,6 +96,12 @@ function saveSelection(name, text) {
 			var comment = JSON.parse(GetCookie("comment"));
 			var hits = JSON.parse(GetCookie("hits"));
 			for (i = 0; i < old.length; i++) {
+				while(i>=4){
+					old.pop();
+					comment.pop();
+					hits.pop();
+					i--;
+				}
 				if (old[i] == name) {
 					flag = 1;
 					hits[i] = parseInt(hits[i]) + 1;
@@ -210,7 +219,7 @@ function createform() {
 	form.setAttribute("id", "fillForm");
 	form.setAttribute("action", "post.html")
 	form.setAttribute("autocomplete", "on");
-	form.setAttribute("onsubmit", "return validateForm()")
+	form.setAttribute("onsubmit", "return validate()")
 	div1.appendChild(form);
 	myDiv.appendChild(div1);
 	createInput("First Name");
@@ -297,7 +306,7 @@ firstName,lastName,comment-cannot be null
 firstName,lastName should contain only alphabets
 --------------------------------------------------------------
 */
-function validateForm() {
+function validate() {
 	var inp = document.getElementsByTagName("input");
 	var text = document.getElementsByTagName("textarea")
 	var regex = /^[A-Za-z]+$/;
