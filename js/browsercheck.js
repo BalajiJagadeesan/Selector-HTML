@@ -32,6 +32,8 @@ function get_browser() {
 	if ((tem = ua.match(/version\/(\d+)/i)) != null) {
 		M.splice(1, 1, tem[1]);
 	}
+	console.log(M[0]);
+	console.log(M[1]);
 	return {
 		name: M[0]
 		, version: M[1]
@@ -46,7 +48,7 @@ If the browser uses IE and the version is less than 7,browser.html will be trigg
 
 function browserCheck() {
 	var browser = get_browser();
-	if (browser.name == "MSIE" && browser.version < 7) {
+	if (browser.name == "MSIE" && browser.version <	 7) {
 		window.location.href = "browser.html";
 	}
 	console.log(browser.name);

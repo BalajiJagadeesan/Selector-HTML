@@ -19,13 +19,13 @@ After storing the JSON object it invokes 2 functions
 */
 var http = new XMLHttpRequest();
 var url = "data.json";
-//console.log(url)
+console.log(url)
 http.onreadystatechange = function () {
 	if (this.readyState == 4 && this.status == 200) {
 		var myArr = JSON.parse(this.responseText);
 		data = myArr;
 		createImage(data["partpicker"]);
-		//console.log(data["partpicker"]);
+		console.log(data["partpicker"]);
 		createSelect(data["partpicker"]);
 	}
 };
