@@ -19,7 +19,9 @@ p {
 	margin-right: 2em;
 	margin-bottom: 2em;
 	width: 95vw;
-	height: 150vh;
+    min-height:900px;
+    height:auto !important;
+    height: 900px;
 }
 
 #header {
@@ -87,8 +89,9 @@ ul.topnav li.right {
 }
 
 #wrapper {
-	position:relative;
-	width: 95%
+	width: 95%;
+    min-height:100%;
+
 }
 
 .content {
@@ -99,16 +102,14 @@ ul.topnav li.right {
 select {
 	margin-left: 1em;
 	padding: 5px;
-	background: transparent;
 	width: 70%;
 	font-size: 1em;
-	border: 3px round #ccc;
+	border: 3px round #cccc;
 	height: 2.5em;
 	cursor: pointer;
 	-webkit-appearance: none;
 	-moz-appearance: none;
 	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-	appearance: none;
 	background: #ccc;
 }
 
@@ -119,10 +120,12 @@ input{
 img {
 	float: right;
 	margin-top: 10px;
-	width: 20%;
+    margin-left:1em;
+    margin-right: 1em;
 	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
 	transition: 0.3s;
 	width: 30%;
+    height:300px;
 	border-radius: 5px;
 }
 .browser{
@@ -161,10 +164,13 @@ img {
 }
 
 #footer {
-	width: 95vw;
+	min-width:96.2%;
+	width:auto !important;
+	width:96.2%;
+	width: inherit;
 	height: 3em;
 	position: absolute;
-	top:150vh;
+	top:900px;
 	margin-right: 2em;
 	background-color: #0097A7;
 	text-align: center;

@@ -17,20 +17,22 @@ After storing the JSON object it invokes 2 functions
 2.createSelection(array)-Create the first select statement
 --------------------------------------------------------
 */
-var http = new XMLHttpRequest();
-var url = "data.json";
-console.log(url)
-http.onreadystatechange = function () {
-	if (this.readyState == 4 && this.status == 200) {
-		var myArr = JSON.parse(this.responseText);
-		data = myArr;
-		createImage(data["partpicker"]);
-		console.log(data["partpicker"]);
-		createSelect(data["partpicker"]);
-	}
-};
-http.open("GET", url, true);
-http.send();
+function start() {
+    var http = new XMLHttpRequest();
+    var url = "data.json";
+    console.log(url);
+    http.onreadystatechange = function () {
+        if (this.readyState == 4 && this.status == 200) {
+            var myArr = JSON.parse(this.responseText);
+            data = myArr;
+            createImage(data["partpicker"]);
+            console.log(data["partpicker"]);
+            createSelect(data["partpicker"]);
+        }
+    };
+    http.open("GET", url, true);
+    http.send();
+}
 /*
 -----------------------------------------------------------
 The following function is used to save the choice and 
@@ -147,9 +149,9 @@ The animation of div is done using move(id) function
 */
 function createSelect(array) {
 	var myDiv = document.getElementById("question");
-	var div1 = document.createElement("div")
-	div1.setAttribute("id", "mydiv" + count)
-	div1.setAttribute("class", "cards")
+	var div1 = document.createElement("div");
+	div1.setAttribute("id", "mydiv" + count);
+	div1.setAttribute("class", "cards");
 	var para = document.createElement("p");
 	var node = document.createTextNode(array.Qpart);
 	para.appendChild(node);
@@ -159,13 +161,13 @@ function createSelect(array) {
 	sel.setAttribute("onchange", "listen(this)");
 	var option = document.createElement("option");
 	option.value = "";
-	option.text = "Select an option";
+    option.text=option.textContent=option.innerText  = "Select an option";
 	sel.appendChild(option);
 	for (var i = 0; i < array.choose.length; i++) {
 		var option = document.createElement("option");
 		option.id = i;
 		option.value = array.choose[i];
-		option.text = array.choose[i];
+		option.text=option.textContent=option.innerText = array.choose[i];
 		sel.appendChild(option);
 	}
 	div1.appendChild(sel);

@@ -1,4 +1,12 @@
-Interactive Form Elements using Dynamic HTML:
+﻿Interactive Form Elements using Dynamic HTML:
+
+Website link :https://people.rit.edu/bxj9142/DynamicHTML/index.html
+
+Changelog:
+BrowserCheck working properly (IE=7 and below-redirected).
+Optimized for IE-8 ,IE-9 .
+Footer overlapping the content is fixed in edge browser.
+
 
 A small application to help the user to buy the right set of computer for their personal use.The application is created with the help of DOM elements to dynamically generate and display objects on the screen.
 	
@@ -57,7 +65,7 @@ Display of output:
 	The output is displayed dynamically using DOM elements with the use of stored variable in localStorage(if available) or cookies.
 	
 Styling:
-	The styling is done is css which follows material design and used of card view to have a visual impact 
+	The styling is done is css which follows material design and used card view to have a visual impact 
 	
 Validation:
 	The form is validated using validate() function.It checks for null fields and whether the firstName and lastName field contains only alphabet.

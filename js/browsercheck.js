@@ -48,7 +48,7 @@ If the browser uses IE and the version is less than 7,browser.html will be trigg
 
 function browserCheck() {
 	var browser = get_browser();
-	if (browser.name == "MSIE" && browser.version <	 7) {
+	if (browser.name == "MSIE" && browser.version <= 7) {
 		window.location.href = "browser.html";
 	}
 	console.log(browser.name);

@@ -16,17 +16,19 @@ data from the file "data.json"
 post(data) is invoked to retrieve the stored data
 --------------------------------------------------------
 */
-var http = new XMLHttpRequest();
-var url = "data.json";
+function start() {
+	var http = new XMLHttpRequest();
+	var url = "data.json";
 //console.log(url)
-http.onreadystatechange = function () {
-	if (this.readyState == 4 && this.status == 200) {
-		var myArr = JSON.parse(this.responseText);
-		post(myArr);
-	}
-};
-http.open("GET", url, true);
-http.send();
+	http.onreadystatechange = function () {
+		if (this.readyState == 4 && this.status == 200) {
+			var myArr = JSON.parse(this.responseText);
+			post(myArr);
+		}
+	};
+	http.open("GET", url, true);
+	http.send();
+}
 /*
 -----------------------------------------------------------
 The following function is used to retrieve the choice and 
