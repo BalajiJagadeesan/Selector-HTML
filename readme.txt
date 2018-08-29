@@ -1,7 +1,5 @@
 ﻿Interactive Form Elements using Dynamic HTML:
 
-Website link :https://people.rit.edu/bxj9142/DynamicHTML/index.html
-
 Changelog:
 BrowserCheck working properly (IE=7 and below-redirected).
 Optimized for IE-8 ,IE-9 .
